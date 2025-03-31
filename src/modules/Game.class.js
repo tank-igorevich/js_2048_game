@@ -110,9 +110,9 @@ export class Game {
       if (!finalRow.every((val, idx) => val === this.board[i][idx])) {
         moved = true;
 
-        mergedPositions.forEach((pos) =>
-          mergedTiles.push([i, this.size - 1 - pos])
-        );
+        mergedPositions.forEach((pos) => {
+          mergedTiles.push([i, this.size - 1 - pos]);
+        });
       }
       this.board[i] = finalRow;
     }
@@ -153,9 +153,9 @@ export class Game {
       if (!finalColumn.every((val, idx) => val === column[idx])) {
         moved = true;
 
-        mergedPositions.forEach((pos) =>
-          mergedTiles.push([this.size - 1 - pos, j])
-        );
+        mergedPositions.forEach((pos) => {
+          mergedTiles.push([this.size - 1 - pos, j]);
+        });
       }
 
       for (let i = 0; i < this.size; i++) {
